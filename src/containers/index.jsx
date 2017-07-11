@@ -1,0 +1,9 @@
+export const STEP = {
+  DEFAULT:       0b000001,
+  RECORDING:     0b000010,
+  RECORDED:      0b000100,
+  PLAYING:       0b100100,
+  PLAYING_ONLY:  0b100000,
+  UPLOADING:     0b001000,
+  UPLOADED:      0b010000,
+};
