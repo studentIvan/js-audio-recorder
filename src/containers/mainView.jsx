@@ -36,7 +36,10 @@ class MainView extends React.Component {
     try {
       /* init browser audio */
       window.AudioContext = window.AudioContext || window.webkitAudioContext;
-      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+      navigator.getUserMedia = (navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia);
       window.URL = window.URL || window.webkitURL;
       audioContext = new AudioContext();
     } catch (e) {
